@@ -1,74 +1,24 @@
-* {
-    box-sizing: border-box;
+header, .project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
 }
 
-body {
-    font-family: Arial;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: flex-start;
-    background: linear-gradient(0deg, rgb(255, 213, 0) 0%, rgb(249, 246, 237) 63%);
-}
-button {
-    background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,96,33,0.9542191876750701) 100%);
-    border-radius: 8px;
-    color: #e24e09;
-    cursor: pointer;
-    font-size: 2em;
-    letter-spacing: 0.21px;
-    line-height: 16px;
-    max-width: 255px;
-    padding: 20px 52px;
-    text-align: center;
-    transition-duration: 0.15s;
-    transition-property: background-color;
-    transition-timing-function: linear;
-    margin-top: 0.6em;
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
 }
 
-header {
-    padding: 40px;
-    text-align: center;
-    background: #3d2913;
-    color: #f2ecc2;
-    border-bottom:30px #040200;
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
 }
 
-.header-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--dark);
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    font-family: 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', 'serif';
-}
-
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-
-.large-font {
-    font-size: 3.5em;
-    text-align:center;
-}
-
-@media screen and (max-width: 1183px) {
-    main {
-    flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 504px) {
-    .large-font {
-    font-size: 2em;
-    }
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
 }

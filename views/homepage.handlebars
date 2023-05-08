@@ -1,28 +1,25 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <title>The Bloggers Den</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./public/css/style.css" />
-    </head>
-<body>
-<header>
 
-<div class= "large-font">The Blogger's Den</div>
-</header>
-
-<nav class="header-nav">
-        <a href="#Home">Home</a>
-        <a href="#Dashboard">Dashboard</a>
-        <a href="#Login">Login</a>
-        <a href="#Logout">Logout</a>
-</nav>
-<main>
-
-{{{body}}}
-
-</main>
-    <script src="public/js/homepage.js"></script>
-</body>
-</html>
+<!-- Loop over each object in the projects array -->
+{{#each projects as |project| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      {{{get_emoji}}}
+      <a href="/project/{{project.id}}">Hello there</a>
+    </h2>
+    <p>
+      <span for="img" aria-label="money">💲</span>
+      <!-- Pass needed_funding value to the helper function -->
+      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
+      needed!
+    </p>
+    <p> {{format_date project.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{project.description}}
+    </p>
+  </div>
+</div>
+{{/each}}
