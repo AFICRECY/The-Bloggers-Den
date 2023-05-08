@@ -17,18 +17,20 @@
         <a href="/">The Blogger's Den</a>
       </h1>
       <nav>
-        <!-- Conditionally render login or logout links -->
+          <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/">Home</a>
-        <a href="/profile">Dashboard</a>
-        <button class="no-button" id="logout">logout</button>
+        <a class="col-auto" href="/">Home</a>
+        <a class="col-auto" href="/profile">Dashboard</a>
+        <a class="col-auto" id="logout">Logout</a>
         {{else}}
         
-        <nav class="header-nav">
-          <a href="/">Home</a>
-          <a href="/login">Login</a>
-               
-        </nav>
+        {{!-- <nav class="header-nav"> --}}
+          <a class="col-auto" href="/">Home</a>
+          <a class="col-auto" href="/login">Login</a>
+        
+        {{!-- </nav> --}}
+        {{/if}}
+      </nav>
         {{/if}}
       </nav>
     </header>
