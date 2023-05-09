@@ -1,29 +1,35 @@
 
 <!-- Loop over each object in the projects array -->
 {{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.title}}</a>
-    </h2>
-    <p> {{format_date project.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-      <p>
-        Content :
-        {{project.content}}
-      </p>
-    </div>
-    {{#if project.comment.length}}
-      <div>
-        <p>
-          Comment :
-          {{project.comment}}
-        </p>
-      </div>
+<div class="project">
 
-    {{/if}}
-  </div>
+    <div class="post_title">
+      <h2 >
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      <a href="/project/{{project.id}}">{{project.title}}</a> 
+      <span class="content_date"> {{format_date project.date_created}}</span>
+      </h2>
+    <div>
+    <div class="content_data">
+        <div class="content_subdata">
+          <p>Content : </p>
+          {{project.content}}
+        </div>
+    </div>
+    <div class="comment"> 
+      {{#if project.comment.length}}
+        <div>
+          <p>
+            Comment :
+            {{project.comment}}
+          </p>
+        </div>
+
+      {{/if}}
+    </div>
+
+ 
+    </div>
+    </div>
+</div>
 {{/each}}

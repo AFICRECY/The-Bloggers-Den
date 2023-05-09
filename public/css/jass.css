@@ -420,12 +420,12 @@ button {
 }
 
 a {
-  color: #1b89bc;
+  color: #010c11;
   text-decoration: none;
 }
 
 a:hover {
-  color: #065b83;
+  color: #f10b0bee;
   text-decoration: underline;
 }
 
@@ -1702,4 +1702,8 @@ form [type='radio'] {
   .align-content-center-xl {
     align-content: center;
   }
+}
+
+body{
+  background: linear-gradient(0deg, rgb(254, 147, 25) 0%, rgb(255, 234, 0) 63%);
 }

@@ -1,24 +1,32 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+header, .project {
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
-}
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+nav a{
+  padding: 10px;
+  border : .4px solid;
+  background-color: orange;
+  border-radius: 30px;
 }
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.post_title{
+  font-size: 20px;
+  background-color: rgb(238, 161, 53);
+  margin-bottom: -5px;
+}
+.content_date{
+  float: right;
+  margin-right: 100px;
+  font-size: 20px;
+}
+.content_data{
+  padding: 20px;
+  background-color: lightgoldenrodyellow;
+  font-size: 16px;
+}
+.comment{
+  background-color: #fcd488;
+  margin-bottom: -20px;
+  padding-left: 20px;
 }
