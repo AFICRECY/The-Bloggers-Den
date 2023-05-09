@@ -3,17 +3,18 @@
     <h2>Login</h2>
     <form class="form login-form">
       <div class="form-group">
-        <label for="email-signup">Username:</label>
-        <input class="form-input" type="text" id="email-signup" />
+        <label for="email-login">Username (email):</label>
+        <input class="form-input" type="text" id="email-login" />
       </div>
       <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
+        <label for="password-login">Password:</label>
+        <input class="form-input" type="password" id="password-login" />
       </div>
       <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
+        <button class="btn btn-primary" type="submit" onclick="loginFormHandler(event)">Login</button>
       </div>
     </form>
+    <a href="/signup">Sign Up Instead</a>
   </div>
 </div>
 
