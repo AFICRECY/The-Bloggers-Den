@@ -3,6 +3,8 @@ const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
+  console.log(req.body)
+
   try {
     const newProject = await Project.create({
       ...req.body,
@@ -14,6 +16,25 @@ router.post('/', withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+router.post('/:id',withAuth, async (req, res) => {
+  try {
+    const projectData = await Project.update({...req.body}, {
+      where: {
+        id: req.params.id
+      }
+    });
+    
+    if (!projectData) {
+      res.status(404).json({ message: 'Failed to update project data!' });
+      return;
+    }
+    res.status(200).json(projectData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {

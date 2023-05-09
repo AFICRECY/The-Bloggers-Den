@@ -41,7 +41,7 @@ const updateButtonHandler = async (event) => {
   const title = document.querySelector("#project-title").value.trim();
   const content = document.querySelector("#project-content").value.trim();
   const comment = document.querySelector("#project-comment").value.trim();
-  
+
 
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
